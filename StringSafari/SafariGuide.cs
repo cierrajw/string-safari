@@ -59,7 +59,7 @@ namespace StringSafari
         public static bool HasZebra(string str)
         {
             return str.ToLower().Contains("zebra");
-        
+
             //or
             //return HasBabyZebra(str.ToLower());
 
@@ -79,7 +79,9 @@ namespace StringSafari
             int firstZebra = str.ToLower().IndexOf("zebra");
             int lastZebra = str.LastIndexOf("zebra");
 
-            if (firstZebra == lastZebra) //if the first occurance of zebra is also the last occurance of zebra (only one zero and not at least two), then it returns false. 
+            if (firstZebra == lastZebra) //if the first occurance of zebra is also the last occurance of zebra 
+                                         //(only one zero and not at least two), then it returns false. Or if if it's nothing/-1 
+                                         //(according to the microsoft website definition. 
             {
 
                 return false;
@@ -100,8 +102,25 @@ namespace StringSafari
         /// <returns>true if the string has at least two lions in it, false otherwise</returns>
         public static bool HasAPride(string str)
         {
-            // TODO
-            return false;
+            string newString = str.ToLower();
+
+            int firstLion = newString.IndexOf("lion");
+            int lastLion = str.LastIndexOf("lion");
+
+            if (firstLion == lastLion)
+            {
+
+                return false;
+
+            }
+
+            else
+            {
+
+                return true;
+            }
+
+
         }
 
         /// <summary>
@@ -112,9 +131,17 @@ namespace StringSafari
         /// <returns>true if the string has at least two lions in it and just one zebra, false otherwise</returns>
         public static bool ThereWillBeBlood(string str)
         {
-            // TODO
-            return false;
-        }
+            
+                // looking for ONE zebra: NOT a dazzle
+                if (HasAPride(str) && (!HasADazzle(str) && HasZebra(str)))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
 
         /// <summary>
         /// Looks for a lion and determines if the lion is far enough away for safety.
@@ -125,8 +152,30 @@ namespace StringSafari
         /// <returns>true if there is no lion at the start of the string</returns>
         public static bool SafeDistanceToLion(string str)
         {
-            // TODO
-            return false;
+            string newString = str.ToLower();
+            if (newString.StartsWith("lion"))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        //Returns true if the string is long (more than ten characters)
+        //<param name="str"></param>
+        //<returns></returns>
+        public bool IsCrowded(string str)
+        {
+            if (str.Length > 10)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
