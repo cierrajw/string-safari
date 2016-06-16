@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace StringSafari
 {
     public class SafariGuide
-    {
+    { 
         /// <summary>
         /// Looks for a baby zebra in <paramref name="str"/>.
         /// <para>A baby zebra is "zebra", all lowercase.</para>
