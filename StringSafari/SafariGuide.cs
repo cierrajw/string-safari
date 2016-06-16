@@ -37,8 +37,16 @@ namespace StringSafari
         /// <returns>true if the string has "ZEBRA" in it, false otherwise</returns>
         public static bool HasAdultZebra(string str)
         {
-            // TODO
-            return false;
+            if (str.Contains("ZEBRA"))
+            {
+                return true;
+            }
+
+            else
+            {
+
+                return false;
+            }
         }
 
         /// <summary>
@@ -50,8 +58,11 @@ namespace StringSafari
         /// <returns>true if the string has a zebra in it, false otherwise</returns>
         public static bool HasZebra(string str)
         {
-            // TODO
-            return false;
+            return str.ToLower().Contains("zebra");
+        
+            //or
+            //return HasBabyZebra(str.ToLower());
+
         }
 
         /// <summary>
@@ -62,8 +73,22 @@ namespace StringSafari
         /// <returns>true if the string has at least two zebras in it, false otherwise</returns>
         public static bool HasADazzle(string str)
         {
-            // TODO
-            return false;
+            //string newString = str.ToLower();
+            //int firstZebra = newString.IndexOf("zebra");
+
+            int firstZebra = str.ToLower().IndexOf("zebra");
+            int lastZebra = str.LastIndexOf("zebra");
+
+            if (firstZebra == lastZebra) //if the first occurance of zebra is also the last occurance of zebra (only one zero and not at least two), then it returns false. 
+            {
+
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
         }
 
         /// <summary>

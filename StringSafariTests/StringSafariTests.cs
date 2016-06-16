@@ -20,25 +20,24 @@ namespace StringSafari.Test
             return SafariGuide.HasBabyZebra(str);
         }
 
-//        [TestCase("zebra", ExpectedResult = false)]
-//        [TestCase("ZEBRA", ExpectedResult = true)]
-//        [TestCase("Lion", ExpectedResult = false)]
-//        [TestCase("LION ZEBRA zebra lion", ExpectedResult = true)]
-//        [TestCase("LION zebra LION", ExpectedResult = false)]
-//        public bool AdultZebraSearch(string str)
-//        {
-//            return SafariGuide.HasAdultZebra(str);
-//        }
-
-//        [TestCase("zebra", ExpectedResult = true)]
-//        [TestCase("ZEBRA", ExpectedResult = true)]
-//        [TestCase("Lion", ExpectedResult = false)]
-//        [TestCase("LION ZEBRA zebra lion", ExpectedResult = true)]
-//        [TestCase("LION zebra LION", ExpectedResult = true)]
-//        public bool ZebraSearch(string str)
-//        {
-//            return SafariGuide.HasZebra(str);
-//        }
+        [TestCase("zebra", ExpectedResult = false)]
+        [TestCase("ZEBRA", ExpectedResult = true)]
+        [TestCase("Lion", ExpectedResult = false)]
+        [TestCase("LION ZEBRA zebra lion", ExpectedResult = true)]
+        [TestCase("LION zebra LION", ExpectedResult = false)]
+        public bool AdultZebraSearch(string str)
+        {
+            return SafariGuide.HasAdultZebra(str);
+        }
+        [TestCase("zebra", ExpectedResult = true)]
+        [TestCase("ZEBRA", ExpectedResult = true)]
+        [TestCase("Lion", ExpectedResult = false)]
+        [TestCase("LION ZEBRA zebra lion", ExpectedResult = true)]
+        [TestCase("LION zebra LION", ExpectedResult = true)]
+        public bool ZebraSearch(string str)
+        {
+            return SafariGuide.HasZebra(str);
+        }
 
 //        [TestCase("zebra", ExpectedResult = false)]
 //        [TestCase("ZEBRA", ExpectedResult = false)]
