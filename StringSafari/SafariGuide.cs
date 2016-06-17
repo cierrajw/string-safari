@@ -9,7 +9,7 @@ namespace StringSafari
     public class SafariGuide
     { 
         /// <summary>......
-        /// Looks for a baby zebra in <paramref name="str"/>.
+        /// Looks for a baby zebra in <paramref name="str"/>......
         /// <para>A baby zebra is "zebra", all lowercase.</para>
         /// </summary>
         /// <param name="str">The string to search</param>
